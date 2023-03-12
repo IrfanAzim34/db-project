@@ -20,3 +20,26 @@ select * from EMPLOYEES order by SALARY desc;
 select * from EMPLOYEES order by FIRST_NAME;
 --NOTE: default order type is asc if you don't specify after column name
 
+--get me all employees whose first name starts with C
+select * from EMPLOYEES where FIRST_NAME like 'C%';
+
+--get me 5 letter first names where the middle char is z
+select * from EMPLOYEES where FIRST_NAME like '__z__';
+
+--get me first name where second char is u
+select * from EMPLOYEES where FIRST_NAME like '_u%';
+
+--find me minimum salary
+select min(SALARY) from EMPLOYEES;
+
+--find me max salary
+select max(SALARY) from EMPLOYEES;
+
+--find average salary
+select avg(SALARY) from EMPLOYEES;
+
+--round
+select round(avg(SALARY),2) from EMPLOYEES;
+
+--give me summary of salaries
+select sum(SALARY) from EMPLOYEES;
