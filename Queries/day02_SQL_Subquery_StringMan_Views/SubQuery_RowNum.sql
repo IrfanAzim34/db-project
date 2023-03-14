@@ -25,4 +25,3 @@ select * from EMPLOYEES where ROWNUM < 11 order by SALARY desc;
 
 --order all employees based on salary high to los then display only first 10 result
 select * from (select * from EMPLOYEES order by SALARY desc) where ROWNUM < 11;
-
